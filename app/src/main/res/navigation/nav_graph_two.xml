@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_two"
+    app:startDestination="@id/twoFragment">
+
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.bmajik.sample_navgraph.TwoFragment"
+        android:label="two_fragment"
+        tools:layout="@layout/two_fragment" >
+        <action
+            android:id="@+id/action_twoFragment_to_threeFragment"
+            app:destination="@id/threeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/threeFragment"
+        android:name="com.bmajik.sample_navgraph.ThreeFragment"
+        android:label="three_fragment"
+        tools:layout="@layout/three_fragment" >
+        <action
+            android:id="@+id/action_threeFragment_pop"
+            app:popUpTo="@id/threeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
